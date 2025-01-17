@@ -26,6 +26,9 @@ Route::post('/login', [AuthController::class, 'login']);
 // update latlong user
 Route::put('/user/update-latlong', [AuthController::class, 'updateLatlong'])->middleware('auth:sanctum');
 
+// update fcm id
+Route::put('/user/update-fcm', [AuthController::class, 'updateFcmId'])->middleware('auth:sanctum');
+
 // logout
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 

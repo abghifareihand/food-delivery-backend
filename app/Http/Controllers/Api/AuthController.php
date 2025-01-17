@@ -186,7 +186,8 @@ class AuthController extends Controller
 
         return response()->json([
             'status' => 'success',
-            'message' => 'FCM ID updated successfully'
+            'message' => 'FCM ID updated successfully',
+            'fcm_id' => $user->fcm_id
         ], 200);
     }
 }
